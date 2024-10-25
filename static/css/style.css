@@ -35,68 +35,98 @@ p {
     font-size: 1.1rem;
 }
 
-/* Estilos da caixa de chat com tons de azul */
+/* Estilos da caixa de chat */
 .chat-container {
-    background-color: rgba(34, 49, 63, 0.9); /* Azul escuro com transparência */
-    width: 80%; /* Aumenta a largura para 80% da tela */
-    max-width: 900px; /* Define uma largura máxima */
+    background-color: rgba(34, 49, 63, 0.9);
+    width: 80%;
+    max-width: 900px;
     border-radius: 15px;
-    box-shadow: 0 4px 8px rgba(0, 123, 255, 0.3); /* Sombra azul clara */
-    margin: 0 auto; /* Centraliza a caixa de chat */
+    box-shadow: 0 4px 8px rgba(0, 123, 255, 0.3);
+    margin: 0 auto;
     overflow: hidden;
     transition: all 0.3s ease-in-out;
 }
 
 .chat-container:hover {
-    box-shadow: 0 8px 16px rgba(0, 123, 255, 0.5); /* Sombra mais forte ao passar o mouse */
+    box-shadow: 0 8px 16px rgba(0, 123, 255, 0.5);
 }
 
 .chatbox {
     display: flex;
     flex-direction: column;
-    height: 450px; /* Mantém a altura original */
+    height: 450px;
 }
 
 .messages {
     flex: 1;
     padding: 20px;
     overflow-y: auto;
-    border-bottom: 1px solid #007BFF; /* Linha azul claro entre as mensagens */
+    border-bottom: 1px solid #007BFF;
 }
 
-.bot-message {
-    background-color: #1E90FF; /* Fundo azul médio para a mensagem do bot */
-    padding: 15px;
-    border-radius: 10px;
-    margin-bottom: 10px;
-    text-align: left;
+/* Estilização com avatar e caixas mais elegantes */
+.user-message, .bot-message {
+    display: flex;
+    align-items: center;
+    font-size: 0.9rem; /* Diminuindo o tamanho da fonte */
+    margin-bottom: 15px; /* Aumentando o espaçamento entre as mensagens */
+    padding: 10px 15px;
+    border-radius: 15px;
     max-width: 90%;
-    color: white;
-    font-size: 1.1rem;
-    font-family: 'Poppins', sans-serif;
+    position: relative; /* Para facilitar a colocação do avatar */
 }
 
+/* Avatar e estilo para a mensagem do usuário */
+.user-message {
+    background-color: #4628a7; /* Cor de fundo para a mensagem do usuário */
+    color: white;
+    align-self: flex-end; /* Alinha a mensagem do usuário à direita */
+    flex-direction: row-reverse; /* Avatar à direita */
+}
+
+.user-message img {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    margin-left: 10px; /* Espaço entre o texto e o avatar */
+}
+
+/* Avatar e estilo para a mensagem do bot */
+.bot-message {
+    background-color: #1E90FF; /* Cor de fundo para a mensagem do bot */
+    color: white;
+    align-self: flex-start; /* Alinha a mensagem do bot à esquerda */
+}
+
+.bot-message img {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    margin-right: 10px; /* Espaço entre o texto e o avatar */
+}
+
+/* Input e botões */
 .input-area {
     display: flex;
     padding: 15px;
-    background-color: rgba(17, 34, 64, 0.9); /* Fundo azul escuro transparente */
+    background-color: rgba(17, 34, 64, 0.9);
 }
 
 .chat-input {
     flex: 1;
     padding: 10px;
-    border: 1px solid #1E90FF; /* Borda azul clara */
+    border: 1px solid #1E90FF;
     border-radius: 10px;
-    background-color: #112244; /* Fundo azul escuro */
+    background-color: #112244;
     color: #fff;
 }
 
 .chat-input::placeholder {
-    color: #89CFF0; /* Placeholder azul claro */
+    color: #89CFF0;
 }
 
 .send-btn {
-    background-color: #007BFF; /* Botão azul vibrante */
+    background-color: #007BFF;
     color: white;
     border: none;
     padding: 10px 20px;
@@ -107,15 +137,16 @@ p {
 }
 
 .send-btn:hover {
-    background-color: #0056b3; /* Cor mais escura ao passar o mouse */
+    background-color: #0056b3;
 }
 
-.formata-texto{
-    white-space: pre-wrap;
-    word-wrap: break-word;
-    overflow: break-word;
+.formata-texto {
+    white-space: pre-wrap !important;
+    word-wrap: break-word !important;
+    overflow: break-word !important;
 }
 
+/* Footer */
 footer {
     text-align: center;
     padding: 15px;
