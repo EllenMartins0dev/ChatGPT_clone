@@ -1,0 +1,148 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: #000;
+    color: #fff;
+}
+
+header {
+    text-align: center;
+    padding: 50px 20px;
+    background-color: rgba(0, 0, 0, 0.7);
+    color: white;
+    animation: fadeIn 2s ease-in-out;
+}
+
+.header-content {
+    display: inline-block;
+    background-color: rgba(255, 255, 255, 0.1);
+    padding: 20px;
+    border-radius: 10px;
+}
+
+h1 {
+    font-size: 2rem;
+    margin-bottom: 10px;
+    animation: slideIn 1.5s ease-out;
+}
+
+p {
+    font-size: 1.1rem;
+}
+
+/* Estilos da caixa de chat com tons de azul */
+.chat-container {
+    background-color: rgba(34, 49, 63, 0.9); /* Azul escuro com transparência */
+    width: 80%; /* Aumenta a largura para 80% da tela */
+    max-width: 900px; /* Define uma largura máxima */
+    border-radius: 15px;
+    box-shadow: 0 4px 8px rgba(0, 123, 255, 0.3); /* Sombra azul clara */
+    margin: 0 auto; /* Centraliza a caixa de chat */
+    overflow: hidden;
+    transition: all 0.3s ease-in-out;
+}
+
+.chat-container:hover {
+    box-shadow: 0 8px 16px rgba(0, 123, 255, 0.5); /* Sombra mais forte ao passar o mouse */
+}
+
+.chatbox {
+    display: flex;
+    flex-direction: column;
+    height: 450px; /* Mantém a altura original */
+}
+
+.messages {
+    flex: 1;
+    padding: 20px;
+    overflow-y: auto;
+    border-bottom: 1px solid #007BFF; /* Linha azul claro entre as mensagens */
+}
+
+.bot-message {
+    background-color: #1E90FF; /* Fundo azul médio para a mensagem do bot */
+    padding: 15px;
+    border-radius: 10px;
+    margin-bottom: 10px;
+    text-align: left;
+    max-width: 90%;
+    color: white;
+    font-size: 1.1rem;
+    font-family: 'Poppins', sans-serif;
+}
+
+.input-area {
+    display: flex;
+    padding: 15px;
+    background-color: rgba(17, 34, 64, 0.9); /* Fundo azul escuro transparente */
+}
+
+.chat-input {
+    flex: 1;
+    padding: 10px;
+    border: 1px solid #1E90FF; /* Borda azul clara */
+    border-radius: 10px;
+    background-color: #112244; /* Fundo azul escuro */
+    color: #fff;
+}
+
+.chat-input::placeholder {
+    color: #89CFF0; /* Placeholder azul claro */
+}
+
+.send-btn {
+    background-color: #007BFF; /* Botão azul vibrante */
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    margin-left: 10px;
+    border-radius: 10px;
+    cursor: pointer;
+    font-family: 'Poppins', sans-serif;
+}
+
+.send-btn:hover {
+    background-color: #0056b3; /* Cor mais escura ao passar o mouse */
+}
+
+.formata-texto{
+    white-space: pre-wrap;
+    word-wrap: break-word;
+    overflow: break-word;
+}
+
+footer {
+    text-align: center;
+    padding: 15px;
+    background-color: #112244;
+    color: white;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+}
+
+/* Animações */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes slideIn {
+    from {
+        transform: translateY(20px);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}

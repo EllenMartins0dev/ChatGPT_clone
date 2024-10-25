@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chatbot de Idiomas</title>
+    <link rel="stylesheet" href={{url_for('static',filename='css/style.css')}}>
+    <script src="{{url_for('static',filename='js/chat.js')}}"></script>
+</head>
+<body>
+  <header>
+    <div class="header-content">
+        <h1>🌍 Aprenda Idiomas com Nosso Chatbot 🌟</h1>
+        <p>Melhore suas habilidades em <strong>Inglês 🇬🇧</strong>, <strong>Espanhol 🇪🇸</strong> e <strong>Japonês 🇯🇵</strong>!</p>
+    </div>
+</header>
+
+    <main>
+        <section class="chat-container">
+            <div class="chatbox">
+                <div class="messages" id="chatWindow">
+                    <div class="bot-message">Olá! Eu sou seu assistente de idiomas. Como posso ajudar?</div>
+                </div>
+                <div class="input-area">
+                    <input type="text" id="userInput" placeholder="Digite sua mensagem aqui..." class="chat-input">
+                    <button type="" class="send-btn" id="sendButton">Enviar</button>
+                </div>
+            </div>
+        </section>
+    </main>
+  <br>
+  <br>
+   <br>
+  <br>
+
+    <footer>
+        <p>© 2024 Chatbot de Idiomas | Inglês, Espanhol e Japonês</p>
+    </footer>
+<script>
+    const sendButon = document.getElementById('sendButton');
+        sendButton.addEventListener('click' , sendMessage);
+</script>
+</body>
+</html>
